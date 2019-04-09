@@ -1,5 +1,8 @@
-export default (state = undefined, action) => {
-  if (action === "select_library"){
-    return action.payload
+export default (state = null, action) => {
+  switch (action.type) {
+    case "select_library":
+      return action.payload
+    default:
+      return state
   }
 }
